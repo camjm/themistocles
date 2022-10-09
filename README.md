@@ -29,3 +29,5 @@ They have access to the same JS APIs and tooling for typical front-end developme
 ## Debugging
 To debug in VS Code it needs to be attached to both the main and renderer processes of electron (see '.vscode/launch.json').
 Select 'Main + renderer' in the Run and Debug window.
+
+https://www.electronjs.org/docs/latest/tutorial/tutorial-preload
