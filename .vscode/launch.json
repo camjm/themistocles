@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "compounds": [
+        { // execute both configurations simultaneously
+            "name": "Main + renderer",
+            "configurations": [
+                "Main",
+                "Renderer"
+            ],
+            "stopAll": true
+        }
+    ],
+    "configurations": [
+        { // only attach the renderer process (it is created by the main process)
+            "name": "Renderer",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome", // the renderer electron procerss is a web process
+            "webRoot": "${workspaceFolder}"
+        },
+        { // start the main process
+            "name": "Main",
+            "type": "node", // the main electron process is a node process
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "args": [
+                ".",
+                "--remote-debugging-port=9222" // expose port 9222 for remote debugging of renderer
+            ],
+            "outputCapture": "std",
+            "console": "integratedTerminal"
+        }
+    ]
+}

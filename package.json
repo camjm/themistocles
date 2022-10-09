@@ -1,0 +1,26 @@
+{
+  "name": "themistocles",
+  "version": "1.0.0",
+  "description": "desktop electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camjm/themistocles.git"
+  },
+  "keywords": [
+    "electron",
+    "nodejs"
+  ],
+  "author": "camjm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camjm/themistocles/issues"
+  },
+  "homepage": "https://github.com/camjm/themistocles#readme",
+  "devDependencies": {
+    "electron": "^21.1.0"
+  }
+}
