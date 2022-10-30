@@ -3,19 +3,12 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> -->
     <title>Themistocles</title>
 </head>
 
 <body>
-    <!-- <script>
-        // require('./app.js');
-        const platform = document.querySelector('#platform');
-        const version = document.querySelector('#version');
-        platform.textContent = process.platform;
-        version.textContent = process.version;
-    </script> -->
     <h1>Themistocles</h1>
     <p>
         Themistocles (Greek: Θεμιστοκλῆς; c. 524-459 BC) was an Athenian politician and general.
@@ -24,8 +17,14 @@
         He was one of a new breed of non-aristocratic politicians who rose to prominence in the early years of the
         Athenian democracy.
     </p>
+    
+    <pre id="package"></pre>
     <span id="platform">platform</span>
     <span id="version">version</span>
+    
+    <script>
+        require('./app.js');
+    </script>
 </body>
 
 </html>
